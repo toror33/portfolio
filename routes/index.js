@@ -2,22 +2,23 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function (req, res, next) {
-    res.render('index');
+    res.render('main');
 });
 
-router.get('/index', function (req, res, next) {
-    res.render('index');
+router.get('/main', function (req, res, next) {
+    res.render('main');
+});
+
+router.get('/about', function (req, res, next) {
+    res.render('about');
+});
+
+router.get('/services', function (req, res, next) {
+    res.render('services');
 });
 
 router.get('/contact', function (req, res, next) {
     res.render('contact');
 });
 
-router.get('/inside', function (req, res, next) {
-    res.render('inside');
-});
-
-router.get('/services', function (req, res, next) {
-    res.render('services');
-});
 module.exports = router;
